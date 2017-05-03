@@ -1,0 +1,10 @@
+输入输出流中的奇淫技巧：
+1.getline()输入。具体解释为可以使输入接收到回车符停止输入。格式为getline(cin,s)，其中s为string类型，输入中可以包含空格。包含于string.h头文件。
+2.cin.getline()输入。接受一个字符，或者接收到某个字符时停止输入。cin.getline(ch,20,'/')  //读个字符或遇'/'结束。其中ch的声明为：char ch[20]。
+3.stringstream函数。包含于sstream头文件。以空格为内部界，赋值给变量。使用格式为stringstream ss(M) M为一个字符串变量，也可以是一个字符串常量。
+  此外可以使用M.put或是左移符来将其内部划分的变量赋值给其他变量。例如：
+  stringstream ss(M);
+  int n=0;
+  while(ss>>num[n])
+    n++;
+  这样就可以将ss里面的分割开来的int数据赋值给int数组num了。
